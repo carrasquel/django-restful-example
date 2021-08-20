@@ -8,7 +8,7 @@ class ToDo(models.Model):
     task = models.CharField(max_length=80, default='')
     finished = models.BooleanField(default=False)
 
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, on_delete=models.CASCADE)
 
     def __str__(self):
 
